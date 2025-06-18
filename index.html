@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Matemática - 4º Ano Fundamental (20 Questões)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+        .question-section {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .question-section:last-child {
+            border-bottom: none;
+        }
+        .question {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .question p {
+            margin: 5px 0;
+        }
+        .question input[type="text"], .question input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            display: block;
+            margin: 20px auto 0;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Hidden by default */
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            border-color: #c3e6cb;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+        }
+        .feedback.empty {
+            background-color: #fff3cd;
+            color: #856404;
+            border-color: #ffeeba;
+        }
+        .feedback p {
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questões de Matemática - 4º Ano Fundamental</h1>
+        <p style="text-align: center;">Preencha as respostas abaixo. Você pode verificar mesmo com campos em branco.</p>
+
+        <form id="mathQuiz">
+            <div class="question-section">
+                <h2>Operações e Problemas</h2>
+
+                <div class="question">
+                    <p><strong>1. Situação-problema (Adição):</strong> Uma biblioteca recebeu 457 livros em janeiro e 328 livros em fevereiro. Quantos livros a biblioteca recebeu no total nesses dois meses?</p>
+                    <label for="q1">Resposta:</label>
+                    <input type="number" id="q1" name="q1">
+                    <div id="feedback1" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>2. Situação-problema (Subtração):</strong> Um caminhão saiu da fábrica com 850 caixas de suco e entregou 375 caixas. Quantas caixas de suco ainda restam no caminhão?</p>
+                    <label for="q2">Resposta:</label>
+                    <input type="number" id="q2" name="q2">
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>3. Situação-problema (Multiplicação):</strong> Cada pacote de balas tem 12 unidades. Se João comprou 8 pacotes, quantas balas ele tem ao todo?</p>
+                    <label for="q3">Resposta:</label>
+                    <input type="number" id="q3" name="q3">
+                    <div id="feedback3" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>4. Situação-problema (Divisão):</strong> Uma professora tem 210 lápis para dividir igualmente entre 7 caixas. Quantos lápis ficarão em cada caixa?</p>
+                    <label for="q4">Resposta:</label>
+                    <input type="number" id="q4" name="q4">
+                    <div id="feedback4" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>5. Expressão Numérica:</strong> Resolva: $$ (10 + 5) \times 2 - 8 $$</p>
+                    <label for="q5">Resposta:</label>
+                    <input type="number" id="q5" name="q5">
+                    <div id="feedback5" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>6. Análise Combinatória:</strong> Em uma sorveteria, há 4 sabores de sorvete e 3 tipos de cobertura. De quantas maneiras diferentes é possível combinar um sorvete com uma cobertura?</p>
+                    <label for="q6">Resposta:</label>
+                    <input type="number" id="q6" name="q6">
+                    <div id="feedback6" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>7. Situação-problema (Multiplicação e Adição):</strong> Um ingresso para o cinema custa R$ 25. Se 3 amigos foram ao cinema e cada um comprou uma pipoca por R$ 10, quanto gastaram no total?</p>
+                    <label for="q7">Resposta:</label>
+                    <input type="number" id="q7" name="q7">
+                    <div id="feedback7" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>8. Expressão Numérica:</strong> Calcule: $$ 50 \div 5 + 12 \times 3 $$</p>
+                    <label for="q8">Resposta:</label>
+                    <input type="number" id="q8" name="q8">
+                    <div id="feedback8" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>9. Situação-problema (Subtração e Divisão):</strong> Uma corda de 150 metros foi cortada em dois pedaços. Um pedaço tem 70 metros. O pedaço restante foi dividido em 4 partes iguais. Qual o tamanho de cada uma dessas partes?</p>
+                    <label for="q9">Resposta:</label>
+                    <input type="number" id="q9" name="q9">
+                    <div id="feedback9" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>10. Análise Combinatória:</strong> Para montar um lanche, você pode escolher entre 2 tipos de pão e 5 tipos de recheio. Quantos lanches diferentes podem ser montados?</p>
+                    <label for="q10">Resposta:</label>
+                    <input type="number" id="q10" name="q10">
+                    <div id="feedback10" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>11. Expressão Numérica:</strong> Resolva: $$ 7 \times (8 - 3) + 20 $$</p>
+                    <label for="q11">Resposta:</label>
+                    <input type="number" id="q11" name="q11">
+                    <div id="feedback11" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>12. Situação-problema (Adição e Multiplicação):</strong> Em uma festa, havia 4 mesas com 6 cadeiras em cada uma e 2 mesas com 8 cadeiras em cada uma. Quantas cadeiras havia no total?</p>
+                    <label for="q12">Resposta:</label>
+                    <input type="number" id="q12" name="q12">
+                    <div id="feedback12" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>13. Expressão Numérica:</strong> Calcule: $$ 100 - (25 + 15) \div 8 $$</p>
+                    <label for="q13">Resposta:</label>
+                    <input type="number" id="q13" name="q13">
+                    <div id="feedback13" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>14. Análise Combinatória:</strong> Uma loja de roupas vende camisetas em 3 tamanhos (P, M, G) e 6 cores diferentes. Quantas opções de camiseta diferentes um cliente tem?</p>
+                    <label for="q14">Resposta:</label>
+                    <input type="number" id="q14" name="q14">
+                    <div id="feedback14" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>15. Situação-problema (Quatro Operações):</strong> Ana comprou 5 cadernos por R$ 8 cada um e pagou com uma nota de R$ 50. Quanto ela recebeu de troco?</p>
+                    <label for="q15">Resposta:</label>
+                    <input type="number" id="q15" name="q15">
+                    <div id="feedback15" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>16. Expressão Numérica:</strong> Resolva: $$ (3 \times 9) - (40 \div 5) $$</p>
+                    <label for="q16">Resposta:</label>
+                    <input type="number" id="q16" name="q16">
+                    <div id="feedback16" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>17. Situação-problema (Adição com Reagrupamento):</strong> Em um jogo, Lucas fez 138 pontos no primeiro turno e 275 pontos no segundo turno. Quantos pontos ele fez no total?</p>
+                    <label for="q17">Resposta:</label>
+                    <input type="number" id="q17" name="q17">
+                    <div id="feedback17" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>18. Situação-problema (Divisão com Resto):</strong> Uma escola tem 25 alunos e precisa formar grupos de 4 alunos para um trabalho. Quantos grupos completos serão formados e quantos alunos sobrarão?</p>
+                    <label for="q18_grupos">Grupos completos:</label>
+                    <input type="number" id="q18_grupos" name="q18_grupos">
+                    <label for="q18_sobra">Alunos que sobram:</label>
+                    <input type="number" id="q18_sobra" name="q18_sobra">
+                    <div id="feedback18" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>19. Expressão Numérica:</strong> Calcule: $$ 6 \times (15 - 10) + (30 \div 6) $$</p>
+                    <label for="q19">Resposta:</label>
+                    <input type="number" id="q19" name="q19">
+                    <div id="feedback19" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                    <p><strong>20. Análise Combinatória:</strong> Em um restaurante, você pode escolher entre 2 tipos de carne e 4 acompanhamentos. Quantas combinações diferentes de prato principal você pode fazer (1 carne e 1 acompanhamento)?</p>
+                    <label for="q20">Resposta:</label>
+                    <input type="number" id="q20" name="q20">
+                    <div id="feedback20" class="feedback"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Verificar Respostas</button>
+        </form>
+
+        <div class="footer">
+            <p>Conteúdo baseado no documento "ORIENTADOR DE ESTUDOS DAS PARCIAIS - 4.º ANO - 2.º TRIMESTRE" do Colégio Marista de Brasília.</p>
+            <p>Para mais materiais, consulte o site oficial do Colégio Marista de Brasília.</p>
+            <p>Colégio Marista de Brasília - SGAS 609, conjunto A - L2 Sul, (61) 3442-9400</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mathQuiz').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o recarregamento da página
+
+            const answers = {
+                q1: 785,
+                q2: 475,
+                q3: 96,
+                q4: 30,
+                q5: 22,
+                q6: 12,
+                q7: 105, // 3 * 25 + 3 * 10 = 75 + 30 = 105
+                q8: 46, // 10 + 36 = 46
+                q9: 20, // (150-70)/4 = 80/4 = 20
+                q10: 10,
+                q11: 55, // 7*5 + 20 = 35+20 = 55
+                q12: 40, // (4*6) + (2*8) = 24 + 16 = 40
+                q13: 95, // 100 - (40 / 8) = 100 - 5 = 95
+                q14: 18,
+                q15: 10, // 50 - (5*8) = 50 - 40 = 10
+                q16: 19, // 27 - 8 = 19
+                q17: 413,
+                q18_grupos: 6, // 25 / 4 = 6 com resto
+                q18_sobra: 1, // 25 % 4 = 1
+                q19: 35, // 6*5 + 5 = 30 + 5 = 35
+                q20: 8
+            };
+
+            for (let i = 1; i <= 20; i++) {
+                // Tratamento especial para a questão 18, que tem dois campos
+                if (i === 18) {
+                    const gruposInput = document.getElementById('q18_grupos');
+                    const sobraInput = document.getElementById('q18_sobra');
+                    const feedbackDiv = document.getElementById('feedback18');
+
+                    const userGrupos = gruposInput.value === '' ? null : parseInt(gruposInput.value);
+                    const userSobra = sobraInput.value === '' ? null : parseInt(sobraInput.value);
+                    const correctGrupos = answers.q18_grupos;
+                    const correctSobra = answers.q18_sobra;
+
+                    feedbackDiv.style.display = 'block';
+
+                    if (userGrupos === null && userSobra === null) {
+                        feedbackDiv.className = 'feedback empty';
+                        feedbackDiv.innerHTML = `<p>Você deixou esta questão em branco. As respostas corretas são: ${correctGrupos} grupos e ${correctSobra} aluno(s) sobrando.</p>`;
+                    } else if (userGrupos === correctGrupos && userSobra === correctSobra) {
+                        feedbackDiv.className = 'feedback correct';
+                        feedbackDiv.innerHTML = '<p>Correto!</p>';
+                    } else {
+                        feedbackDiv.className = 'feedback incorrect';
+                        feedbackDiv.innerHTML = `<p>Incorreto. As respostas corretas são: ${correctGrupos} grupos e ${correctSobra} aluno(s) sobrando.</p>`;
+                    }
+                } else {
+                    const inputId = `q${i}`;
+                    const feedbackId = `feedback${i}`;
+                    const inputElement = document.getElementById(inputId);
+                    const userAnswer = inputElement.value === '' ? null : parseInt(inputElement.value); // Pega null se vazio
+                    const correctAnswer = answers[inputId];
+                    const feedbackDiv = document.getElementById(feedbackId);
+
+                    feedbackDiv.style.display = 'block';
+
+                    if (userAnswer === null) {
+                        feedbackDiv.className = 'feedback empty';
+                        feedbackDiv.innerHTML = `<p>Você deixou esta questão em branco. A resposta correta é: ${correctAnswer}</p>`;
+                    } else if (userAnswer === correctAnswer) {
+                        feedbackDiv.className = 'feedback correct';
+                        feedbackDiv.innerHTML = '<p>Correto!</p>';
+                    } else {
+                        feedbackDiv.className = 'feedback incorrect';
+                        feedbackDiv.innerHTML = `<p>Incorreto. A resposta correta é: ${correctAnswer}</p>`;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
